@@ -6,8 +6,13 @@
     <ion-title>alert</ion-title>
   </ion-toolbar>
 </ion-header> -->
-<app-header titulo="alerta"></app-header>
+<app-header [titulo]="titulo || 'Alerta'"></app-header>
 
 <ion-content>
-
+<ion-button  expand="full" color="primary" (click)="presentAlert()">
+  Mostrar Alerta Simple</ion-button>
+<ion-button  expand="full" color="secondary" (click)="presentAlertConfirm()">
+  Mostrar Alerta Con Opciones</ion-button>
+<ion-button  expand="full" color="tertiary" (click)="presentAlertPrompt()">
+  Mostrar alerta con Input</ion-button>
 </ion-content>
