@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Botones</ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-button color="primary">
+        <ion-icon name="heart" color="danger"></ion-icon>
+      </ion-button>
+      
+      <ion-button color="primary">
+        <ion-icon name="star" color="tertiary"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!-- -------------------------- Botones Normales --------------------------- -->
+
+  <ion-button color="primary" size="small" expand="full">Small</ion-button>
+  <ion-button color="secondary" size="default" expand="full">Default</ion-button>
+  <ion-button color="tertiary" size="large" expand="full">Large</ion-button>
+
+<!-- ------------------------------- ANCHOR -------------------------------- -->
+
+  <ion-button class="top-20" color="success" expand="full" routerLink="/alert">Ruta a alert</ion-button>
+
+<!-- ----------------------------- CON UN GRID ----------------------------- -->
+<ion-row>
+  <ion-col>
+      <ion-button class="top-20" color="warning" expand="full" routerLink="/avatar">Ruta a avatar</ion-button>
+  </ion-col>
+  <ion-col>
+      <ion-button class="top-20" color="warning" expand="full" routerLink="/action-sheet">Ruta a Action Sheet</ion-button>
+  </ion-col>
+</ion-row>
+
+<!-- -------------------------------- FILL --------------------------------- -->
+<ion-button color="danger" class="top-20" fill="clear">Clear</ion-button>
+<ion-button color="medium" class="top-20" fill="outline">Outline</ion-button>
+<ion-button color="dark" class="top-20" fill="solid">Solid</ion-button>
+</ion-content>
