@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'card', loadChildren: './pages/card/card.module#CardPageModule' },
   { path: 'check', loadChildren: './pages/check/check.module#CheckPageModule' },
   { path: 'datetime', loadChildren: './pages/datetime/datetime.module#DatetimePageModule' },
-  { path: 'fab', loadChildren: './pages/fab/fab.module#FabPageModule' }
+  { path: 'fab', loadChildren: './pages/fab/fab.module#FabPageModule' },
+  { path: 'grid', loadChildren: './pages/grid/grid.module#GridPageModule' }
   // { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
 ];
 
