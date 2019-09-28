@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'buttons', loadChildren: './pages/buttons/buttons.module#ButtonsPageModule' },
   { path: 'card', loadChildren: './pages/card/card.module#CardPageModule' },
   { path: 'check', loadChildren: './pages/check/check.module#CheckPageModule' },
-  { path: 'datetime', loadChildren: './pages/datetime/datetime.module#DatetimePageModule' }
+  { path: 'datetime', loadChildren: './pages/datetime/datetime.module#DatetimePageModule' },
+  { path: 'fab', loadChildren: './pages/fab/fab.module#FabPageModule' }
   // { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
 ];
 
