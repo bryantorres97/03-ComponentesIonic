@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'grid', loadChildren: './pages/grid/grid.module#GridPageModule' },
   { path: 'infinite-scroll', loadChildren: './pages/infinite-scroll/infinite-scroll.module#InfiniteScrollPageModule' },
   { path: 'input', loadChildren: './pages/input/input.module#InputPageModule' },
-  { path: 'list', loadChildren: './pages/list/list.module#ListPageModule' }
+  { path: 'list', loadChildren: './pages/list/list.module#ListPageModule' },
+  { path: 'list-reorder', loadChildren: './pages/list-reorder/list-reorder.module#ListReorderPageModule' }
   // { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
 ];
 
