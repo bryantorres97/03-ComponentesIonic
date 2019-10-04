@@ -21,4 +21,7 @@ export class UsuariosService {
   getMenuOptions() {
     return this.http.get<Componente[]>('/assets/data/menu.json');
   }
+  getSuperheroes() {
+    return this.http.get<Componente[]>('/assets/data/superheroes.json');
+  }
 }

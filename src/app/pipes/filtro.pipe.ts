@@ -6,7 +6,9 @@ import { Album } from '../interfaces/album.interface';
 })
 export class FiltroPipe implements PipeTransform {
 
-  transform(arreglo: any[], texto: string, columna: string): any[] {
+  transform(arreglo: any[],
+            texto: string,
+            columna: string): any[] {
 
     if (texto === '') {
       return arreglo;
