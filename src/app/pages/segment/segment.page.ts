@@ -10,15 +10,12 @@ import { publish } from 'rxjs/operators';
 })
 export class SegmentPage implements OnInit {
 
-  superheroes: any[] = [];
-  publisher: string = '';
+  superheroes: Observable<any[]>;
+  publisher = '';
   constructor(private heroesService: UsuariosService) { }
 
   ngOnInit() {
-    this.heroesService.getSuperheroes().subscribe(data => {
-      console.log(data);  
-      this.superheroes = data;
-    });
+    this.superheroes = this.heroesService.getSuperheroes();
   }
 
   segmentChanged( event ) {
