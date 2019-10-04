@@ -10,7 +10,7 @@ import { publish } from 'rxjs/operators';
 })
 export class SegmentPage implements OnInit {
 
-  superheroes: Observable<any[]>;
+  superheroes: Observable<any>;
   publisher = '';
   constructor(private heroesService: UsuariosService) { }
 
