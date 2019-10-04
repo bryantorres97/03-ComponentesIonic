@@ -95,7 +95,12 @@
     },
     {
         "icon": "copy",
-        "name": "Segment",
+        "name": "Segment y Skeleton Text",
         "redirectTo": "/segment"
+    },
+    {
+        "icon": "albums",
+        "name": "Slides",
+        "redirectTo": "/slides"
     }
 ]
