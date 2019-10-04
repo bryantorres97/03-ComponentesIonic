@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsuariosService } from 'src/app/providers/usuarios.service';
 import { Usuario } from 'src/app/interfaces/usuario.interface';
 import { Observable } from 'rxjs';
-import { IonList } from '@ionic/angular';
+import { IonList, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-list',
@@ -10,9 +10,11 @@ import { IonList } from '@ionic/angular';
   styleUrls: ['./list.page.scss'],
 })
 export class ListPage implements OnInit {
+
   usuarios: Observable<Usuario[]>;
   @ViewChild('lista', {static: false}) lista: IonList;
-  constructor(private usuariosService: UsuariosService) {  }
+
+  constructor( private usuariosService: UsuariosService, private toastController: ToastController ) {  }
 
   ngOnInit() {
     this.usuariosService.getUsers().subscribe((data: any) => {
@@ -21,16 +23,27 @@ export class ListPage implements OnInit {
     });
   }
 
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000,
+      color: 'tertiary'
+    });
+    toast.present();
+  }
+
   favorite(item) {
-    console.log('favorite', item);
+    this.presentToast('Guardó en favoritos');
     this.lista.closeSlidingItems();
   }
+
   share(item) {
-    console.log('share', item);
+    this.presentToast('Compartido');
     this.lista.closeSlidingItems();
   }
+
   delete(item) {
-    console.log('delete', item);
+    this.presentToast('Borrar');
     this.lista.closeSlidingItems();
   }
 
