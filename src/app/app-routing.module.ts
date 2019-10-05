@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'search-bar', loadChildren: './pages/search-bar/search-bar.module#SearchBarPageModule' },
   { path: 'segment', loadChildren: './pages/segment/segment.module#SegmentPageModule' },
   { path: 'slides', loadChildren: './pages/slides/slides.module#SlidesPageModule' },
-  { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' }
+  { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
+  { path: 'loading', loadChildren: './pages/loading/loading.module#LoadingPageModule' }
   // { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
 ];
 
